@@ -60,7 +60,7 @@ public class MainMenu implements Screen {
         firstCall = true;
         speakerOff = false;
 
-        startSound = Gdx.audio.newSound(Gdx.files.internal("sound/Hearbeat.mp3"));
+        startSound = Gdx.audio.newSound(Gdx.files.internal("android/assets/sound/Hearbeat.mp3"));
 
     }
 
@@ -70,9 +70,9 @@ public class MainMenu implements Screen {
     private void setupImg() {
         imgList = new ArrayList<Image>();
 
-        imgList.add(new Image(new Texture("tetriformButtonImages/tetriformPlay.png")));
-        imgList.add(new Image(new Texture("tetriformButtonImages/tetriformLevelSelect.png")));
-        imgList.add(new Image(new Texture("tetriformButtonImages/tetriformQuit.png")));
+        imgList.add(new Image(new Texture("android/assets/tetriformPlay.png")));
+        imgList.add(new Image(new Texture("android/assets/tetriformLevelSelect.png")));
+        imgList.add(new Image(new Texture("android/assets/tetriformQuit.png")));
     }
 
     /**
@@ -84,13 +84,13 @@ public class MainMenu implements Screen {
 
 
         //Add title Tetriform
-        Image titleIMG = new Image(new Texture("tetriformButtonImages/tetriformTitle.png"));
+        Image titleIMG = new Image(new Texture("android/assets/tetriformTitle.png"));
         titleIMG.setSize(titleIMG.getWidth()/1.7f, titleIMG.getHeight()/1.7f);
         titleIMG.setPosition((port.getWorldWidth()/2)-(titleIMG.getWidth()/2), (port.getWorldHeight()/6)*5-(titleIMG.getHeight()/2));
         stage.addActor(titleIMG);
 
         //Add a speaker button that can control whether to turn on the sound.
-        final Texture speakerButton =  new Texture("speaker.png");
+        final Texture speakerButton =  new Texture("android/assets/speaker.png");
         Drawable speakerDrawable = new TextureRegionDrawable(new TextureRegion(speakerButton));
         speakerImage = new Image(speakerDrawable);
         speakerImage.setHeight(25);
